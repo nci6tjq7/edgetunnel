@@ -7,7 +7,7 @@ async function serveClient(req: Request, basePath: string) {
     // resp.headers.set('cache-control', 'public, max-age=2592000');
     let targetUrl = `https://raw.githubusercontent.com/nci6tjq7/edgetunnel/main/apps/cf-page-vless${url.pathname}`;
     if(url.pathname.includes(basePath)){
-      targetUrl = `https://raw.githubusercontent.com/nci6tjq7/edgetunnel/main/apps/cf-page/index.html`;
+      targetUrl = `https://raw.githubusercontent.com/nci6tjq7/edgetunnel/main/apps/cf-page-vless/index.html`;
     }
     console.log(targetUrl)
     const resp = await fetch(targetUrl);
